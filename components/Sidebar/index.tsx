@@ -10,6 +10,8 @@ import {
 import { Logo } from "./Logo";
 import { NaviItem } from "./NavItem";
 import { UserSpaceWidget } from "./UserSpaceWidget";
+import { Profile } from "./Profile";
+import * as Input from "../Input";
 
 export function Sidebar() {
   return (
@@ -19,14 +21,12 @@ export function Sidebar() {
         <span className="">Untitled Ui</span>
       </strong>
 
-      <div className="flex mx-1 w-full items-center gap-2 rounded-lg border border-zinc-200 py-2 px-3 shadow-sm">
-        <Search className="size-5 text-zinc-500" />
-        <input
-          type="text"
-          className="flex-1 border-0 bg-transparent p-0 text-zinc-900 placeholder-zinc-600"
-          placeholder="Search"
-        />
-      </div>
+      <Input.Root>
+        <Input.Prefix>
+          <Search className="size-5 text-zinc-500" />
+        </Input.Prefix>
+        <Input.Control type="text" placeholder="Search..." />
+      </Input.Root>
 
       <nav className="space-y-0.5">
         <NaviItem icon={Home} title="Home" />
@@ -38,6 +38,10 @@ export function Sidebar() {
       </nav>
 
       <UserSpaceWidget />
+
+      <div className="h-px bg-zinc-200" />
+
+      <Profile />
     </aside>
   );
 }

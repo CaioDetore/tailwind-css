@@ -16,6 +16,10 @@
   .grid-cols-app {
     grid-template-columns: minmax(18rem, 20rem) 1fr;
   }
+
+  .grid-cols-profile {
+    grid-template-columns: max-content 1fr min-content;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
