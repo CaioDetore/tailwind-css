@@ -20,6 +20,11 @@
   .grid-cols-profile {
     grid-template-columns: max-content 1fr min-content;
   }
+
+  .grid-cols-form {
+    grid-template-columns: minmax(7.5rem, 17.5rem) minmax(25rem, 1fr)
+      minmax(0, 15rem);
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
