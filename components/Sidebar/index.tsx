@@ -11,7 +11,7 @@ import { Logo } from "./Logo";
 import { NaviItem } from "./NavItem";
 import { UserSpaceWidget } from "./UserSpaceWidget";
 import { Profile } from "./Profile";
-import * as Input from "../Input";
+import * as Input from "../Form/Input";
 
 export function Sidebar() {
   return (
