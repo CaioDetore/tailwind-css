@@ -1,8 +1,11 @@
 import { SettingsTabs } from "@/components/SettingsTabs";
 
 import * as Input from "@/components/Form/Input";
-import { Mail } from "lucide-react";
+import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react";
 import * as FileInput from "@/components/Form/FileInput";
+import { Select } from "@/components/Form/Select";
+import { SelectItem } from "@/components/Form/Select/SelectItem";
+import { Textarea } from "@/components/Form/Textarea";
 
 export default function Home() {
   return (
@@ -109,9 +112,26 @@ export default function Home() {
             >
               Country
             </label>
-            <Input.Root>
-              <Input.Control id="country" defaultValue="" />
-            </Input.Root>
+            <Select placeholder="Select your country...">
+              <SelectItem value="br" text="Brazil" />
+              <SelectItem value="us" text="United State" />
+            </Select>
+          </div>
+
+          <div className="grid gap-3 grid-cols-form items-center pt-5">
+            <label
+              htmlFor="timezone"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Timezone
+            </label>
+            <Select placeholder="Select your timezone...">
+              <SelectItem
+                value="utc8"
+                text="Pacific Standard Time (UTC-08:00)"
+              />
+              <SelectItem value="utc3" text="América São Paulo (UTC-03:00)" />
+            </Select>
           </div>
 
           <div className="grid gap-3 grid-cols-form items-center pt-5">
@@ -121,7 +141,56 @@ export default function Home() {
                 Write a short introduction.
               </span>
             </label>
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid gap-3 grid-cols-2">
+                <Select defaultValue="normal">
+                  <SelectItem value="normal" text="Normal Text" />
+                  <SelectItem value="md" text="MarkDown" />
+                </Select>
+              </div>
+
+              <div className="flex items-center gap-1">
+                <button
+                  type="button"
+                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
+                >
+                  <Bold strokeWidth={3} className="size-4 text-zinc-500" />
+                </button>
+                <button
+                  type="button"
+                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
+                >
+                  <Italic strokeWidth={3} className="size-4 text-zinc-500" />
+                </button>
+                <button
+                  type="button"
+                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
+                >
+                  <Link strokeWidth={3} className="size-4 text-zinc-500" />
+                </button>
+                <button
+                  type="button"
+                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
+                >
+                  <List strokeWidth={3} className="size-4 text-zinc-500" />
+                </button>
+                <button
+                  type="button"
+                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
+                >
+                  <ListOrdered
+                    strokeWidth={3}
+                    className="size-4 text-zinc-500"
+                  />
+                </button>
+              </div>
+
+              <Textarea
+                id="bio"
+                className="min-h-[120px] resize-y w-full rounded-lg border border-zinc-300 px-3 py-2 shadow-sm"
+                defaultValue=""
+              />
+            </div>
           </div>
 
           <div className="grid gap-3 grid-cols-form items-center pt-5">
