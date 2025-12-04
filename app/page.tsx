@@ -141,42 +141,27 @@ export default function Home() {
                   <SelectItem value="normal" text="Normal Text" />
                   <SelectItem value="md" text="MarkDown" />
                 </Select>
-              </div>
 
-              <div className="flex items-center gap-1">
-                <button
-                  type="button"
-                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
-                >
-                  <Bold strokeWidth={3} className="size-4 text-zinc-500" />
-                </button>
-                <button
-                  type="button"
-                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
-                >
-                  <Italic strokeWidth={3} className="size-4 text-zinc-500" />
-                </button>
-                <button
-                  type="button"
-                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
-                >
-                  <Link strokeWidth={3} className="size-4 text-zinc-500" />
-                </button>
-                <button
-                  type="button"
-                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
-                >
-                  <List strokeWidth={3} className="size-4 text-zinc-500" />
-                </button>
-                <button
-                  type="button"
-                  className="hover:bg-zinc-50 rounded-md cursor-pointer"
-                >
-                  <ListOrdered
-                    strokeWidth={3}
-                    className="size-4 text-zinc-500"
-                  />
-                </button>
+                <div className="flex items-center gap-1">
+                  <Button type="button" variant="ghost">
+                    <Bold strokeWidth={3} className="size-4 text-zinc-500" />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <Italic strokeWidth={3} className="size-4 text-zinc-500" />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <Link strokeWidth={3} className="size-4 text-zinc-500" />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <List strokeWidth={3} className="size-4 text-zinc-500" />
+                  </Button>
+                  <Button type="button" variant="ghost">
+                    <ListOrdered
+                      strokeWidth={3}
+                      className="size-4 text-zinc-500"
+                    />
+                  </Button>
+                </div>
               </div>
 
               <Textarea id="bio" />
