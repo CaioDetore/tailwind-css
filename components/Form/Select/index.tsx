@@ -12,7 +12,7 @@ type SelectProps = SelectPrimitive.SelectProps & {
 export function Select({ children, placeholder, ...props }: SelectProps) {
   return (
     <SelectPrimitive.Root {...props}>
-      <SelectPrimitive.Trigger className="flex h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-placeholder:text-zinc-600">
+      <SelectPrimitive.Trigger className="flex h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-placeholder:text-zinc-600 outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-100">
         <SelectPrimitive.Value
           className="text-black"
           placeholder={placeholder}
@@ -27,7 +27,7 @@ export function Select({ children, placeholder, ...props }: SelectProps) {
           side="bottom"
           sideOffset={8}
           position="popper"
-          className="z-10 rounded-lg border border-zinc-200 bg-white w-(--radix-select-trigger-width) shadow-sm"
+          className="z-10 rounded-lg border border-zinc-200 bg-white w-(--radix-select-trigger-width) shadow-sm animate-slide-down-and-fade"
         >
           <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
         </SelectPrimitive.Content>
