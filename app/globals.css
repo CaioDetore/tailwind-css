@@ -38,7 +38,21 @@
   }
 }
 
-@layer utilities {
+@utility grid-cols-app {
+  grid-template-columns: minmax(18rem, 20rem) 1fr;
+}
+
+@utility grid-cols-profile {
+  grid-template-columns: max-content 1fr min-content;
+}
+
+@utility grid-cols-form {
+  grid-template-columns:
+    minmax(7.5rem, 17.5rem) minmax(25rem, 1fr)
+    minmax(0, 15rem);
+}
+
+/* @layer utilities {
   .grid-cols-app {
     grid-template-columns: minmax(18rem, 20rem) 1fr;
   }
@@ -52,7 +66,7 @@
       minmax(7.5rem, 17.5rem) minmax(25rem, 1fr)
       minmax(0, 15rem);
   }
-}
+} */
 
 /* @media (prefers-color-scheme: dark) {
   :root {
