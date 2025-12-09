@@ -1,30 +1,30 @@
-import { ComponentProps } from "react";
+import { ComponentProps } from 'react'
 
-type InputPrefixProps = ComponentProps<"div">;
+type InputPrefixProps = ComponentProps<'div'>
 
 function Prefix(props: InputPrefixProps) {
-  return <div {...props} />;
+  return <div {...props} />
 }
 
-type InputControlProps = ComponentProps<"input">;
+type InputControlProps = ComponentProps<'input'>
 function Control(props: InputControlProps) {
   return (
     <input
       className="flex-1 border-0 bg-transparent p-0 text-zinc-900 placeholder-zinc-600 outline-none"
       {...props}
     />
-  );
+  )
 }
 
-type InputRootProps = ComponentProps<"div">;
+type InputRootProps = ComponentProps<'div'>
 
 function Root(props: InputRootProps) {
   return (
     <div
-      className="flex w-full items-center gap-2 rounded-lg border border-zinc-200 py-2 px-3 shadow-sm focus-within:border-violet-300 focus-within:ring-2 focus-within:ring-violet-100"
+      className="flex w-full items-center gap-2 rounded-lg border border-zinc-200 px-3 py-2 shadow-sm focus-within:border-violet-300 focus-within:ring-2 focus-within:ring-violet-100"
       {...props}
     />
-  );
+  )
 }
 
-export { Prefix, Control, Root };
+export { Prefix, Control, Root }

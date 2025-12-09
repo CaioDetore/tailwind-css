@@ -73,10 +73,10 @@ export function Logo() {
             <div
               // xmlns="http://www.w3.org/1999/xhtml"
               style={{
-                backdropFilter: "blur(2.5px)",
-                clipPath: "url(#bgblur_1_32001_307_clip_path)",
-                height: "100%",
-                width: "100%",
+                backdropFilter: 'blur(2.5px)',
+                clipPath: 'url(#bgblur_1_32001_307_clip_path)',
+                height: '100%',
+                width: '100%',
               }}
             />
           </foreignObject>
@@ -234,5 +234,5 @@ export function Logo() {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }

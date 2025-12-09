@@ -1,5 +1,5 @@
-import { Cog, LifeBuoy } from "lucide-react";
-import { NaviItem } from "./NavItem";
+import { Cog, LifeBuoy } from 'lucide-react'
+import { NaviItem } from './NavItem'
 
 export function UserSpaceWidget() {
   return (
@@ -20,25 +20,25 @@ export function UserSpaceWidget() {
         </div>
 
         <div className="h-2 rounded-full bg-violet-100">
-          <div className="h-2 w-1/2 bg-violet-600 rounded-full" />
+          <div className="h-2 w-1/2 rounded-full bg-violet-600" />
         </div>
 
         <div className="space-x-3">
           <button
             type="button"
-            className="text-sm font-medium text-violet-500 hover:text-violet-700 duration-200"
+            className="text-sm font-medium text-violet-500 duration-200 hover:text-violet-700"
           >
             Dismiss
           </button>
 
           <button
             type="button"
-            className="text-sm font-medium text-violet-500 hover:text-violet-700 duration-200"
+            className="text-sm font-medium text-violet-500 duration-200 hover:text-violet-700"
           >
             Upgrade plan
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }
