@@ -3,9 +3,11 @@
 import {
   ChartBar,
   CheckSquare,
+  Cog,
   Flag,
   Home,
   Layers,
+  LifeBuoy,
   Menu,
   Search,
   Users,
@@ -20,9 +22,9 @@ import { Button } from '../Button'
 
 export function Sidebar() {
   return (
-    <Collapsible.Root className="fixed top-0 right-0 left-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 data-[state=open]:h-screen lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8 lg:data-[state=closed]:bottom-0 lg:data-[state=closed]:h-screen">
+    <Collapsible.Root className="fixed top-0 right-0 left-0 z-20 flex flex-col gap-6 border-b border-zinc-200 bg-white p-4 data-[state=open]:bottom-0 data-[state=open]:h-screen lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8 lg:data-[state=closed]:bottom-0 lg:data-[state=closed]:h-screen dark:border-zinc-800 dark:bg-zinc-900">
       <div className="flex items-center justify-between">
-        <strong className="flex items-center gap-2 text-xl font-semibold text-zinc-900">
+        <strong className="flex items-center gap-2 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           <Logo />
           <span className="">Untitled Ui</span>
         </strong>
@@ -54,7 +56,14 @@ export function Sidebar() {
           <NaviItem icon={Users} title="Users" />
         </nav>
 
-        <UserSpaceWidget />
+        <div className="mt-auto flex flex-col gap-6">
+          <nav className="space-y-0.5">
+            <NaviItem icon={LifeBuoy} title="Support" />
+            <NaviItem icon={Cog} title="Settings" />
+          </nav>
+
+          <UserSpaceWidget />
+        </div>
 
         <div className="h-px bg-zinc-200" />
 
